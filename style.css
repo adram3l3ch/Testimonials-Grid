@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.review > h1 {
+	margin-bottom: 20px;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	line-height: 1.4em;
+}
+
+p,
+h4 {
+	line-height: 1.5em;
+	letter-spacing: 0.05em;
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+p {
+	color: hsl(0, 0%, 81%);
+}
+
+.details p {
+	font-size: 0.8rem;
+}
+
+.section {
+	background-color: hsl(210, 46%, 95%);
+	min-height: 800px;
+	padding: 100px 30px;
+	overflow: hidden;
+	display: flex;
+}
+
+.grid-container {
+	display: grid;
+	margin: auto;
+	max-width: 1300px;
+	max-height: auto;
+	grid-template-columns: repeat(1fr);
+	grid-gap: 30px;
+}
+
+.review {
+	background-color: rgb(226, 214, 43);
+	border-radius: 5px;
+	overflow: hidden;
+	padding: 30px;
+	box-shadow: 0 10px 50px rgb(211, 211, 211);
+}
+
+.details {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.img-container {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 3px solid hsl(263, 64%, 72%);
+	overflow: hidden;
+	margin-right: 20px;
+}
+
+.img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.review1 {
+	background: url("./images/bg-pattern-quotation.svg") no-repeat 90% 0%
+		hsl(263, 55%, 52%);
+	background-size: 30%;
+	color: white;
+}
+
+.review2 {
+	background: hsl(217, 19%, 35%);
+	color: white;
+}
+
+.review3,
+.review5 {
+	background: white;
+	color: hsl(217, 19%, 35%);
+}
+
+.review3 p,
+.review5 p {
+	color: hsl(215, 18%, 56%);
+}
+
+.review4 {
+	background: hsl(219, 29%, 14%);
+	color: white;
+}
+
+@media (min-width: 768px) {
+	.section {
+		height: auto;
+		padding: 50px;
+	}
+	body {
+		font-size: 14px;
+	}
+	p {
+		font-size: 0.9rem;
+	}
+	.grid-container {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: "a d" "c b" "e e";
+	}
+	.review1 {
+		grid-area: a;
+		background-position: 85% 0%;
+		background-size: 20%;
+	}
+	.review2 {
+		grid-area: b;
+	}
+	.review3 {
+		grid-area: c;
+	}
+	.review4 {
+		grid-area: d;
+	}
+	.review5 {
+		grid-area: e;
+	}
+}
+
+@media (min-width: 1440px) {
+	.section {
+		height: 100vh;
+		padding: 50px;
+	}
+	p {
+		font-size: 0.85rem;
+		line-height: 1.7em;
+	}
+	.grid-container {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, minmax(1fr, 300px));
+		grid-template-areas: "a a b e" "c d d e";
+		height: 100%;
+		max-height: 750px;
+	}
+}
