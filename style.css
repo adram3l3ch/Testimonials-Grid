@@ -133,7 +133,7 @@ a {
 	}
 	.grid-container {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-areas: "a a" "b c" "d c" "e e";
+		grid-template-areas: "a a" "b e" "c e" "d d";
 	}
 	.review1 {
 		grid-area: a;
